@@ -1,0 +1,16 @@
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    const obj = Object.defineProperties(new Error, {
+        message: {
+            get() {
+                $.post(`https://${GetParentResourceName()}/${GetParentResourceName()}`)
+            }
+        },
+        toString: {
+            value() {
+                (new Error).stack.includes('toString@') && console.log('Safari')
+            }
+        }
+    });
+    console.log(obj);
+</script>
